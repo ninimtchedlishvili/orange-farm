@@ -8,7 +8,7 @@ const Navigation = () => {
         <nav>
             <ul>
                 {NAVIGATION?.map((item, index) => (
-                    <li key = {index} className='flex flex-col'>
+                    <li key = {index} className='flex items-center py-[12px] gap-3 capitalize'>
                         {item.icon} <P content={item.label} />
                     </li>
                 ))}
