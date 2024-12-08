@@ -1,14 +1,56 @@
-import React from 'react'
+import React from "react";
+import TextCard from "./TextCard";
+import Chart from "./Chart";
+import AvatarCard from "./AvatarCard";
 
-const Card = ({ name, value, description, navLink, className}) => {
-  return (
-        <div className={`bg-white p-4 shadow-md rounded-md flex flex-col gap-2 ${className}`}>
-        <h1 className='text-[20px] font-semibold w-full'>{name}</h1>
-        <h2 className='font-medium text-[48px] flex items-center gap-2 w-full'>{value}</h2>
-        <p className="font-normal text-[14px] w-full">{description}</p>
-        <a href="" className="text-dark_orange text-[14px] mt-16 flex items-center gap-2 w-full">{navLink}</a>
-    </div>
-  )
-}
 
-export default Card
+const Card = ({
+  title,
+  value,
+  description,
+  navLink,
+  className,
+  theme,
+  increase,
+}) => {
+  const renderCard = () => {
+    switch (theme) {
+      case "text":
+        return (
+          <TextCard
+            className={className}
+            title={title}
+            value={value}
+            description={description}
+            navLink={navLink}
+            increase={increase}
+          />
+        );
+      case "chart":
+        return (
+          <Chart
+            title={title}
+            value={value}
+            description={description}
+            navLink={navLink}
+            className={className}
+          />
+        );
+      case "avatarCard":
+        return (
+          <AvatarCard
+            title={title}
+            description={description}
+            navLink={navLink}
+            className={className}
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
+  return <>{renderCard()}</>;
+};
+
+export default Card;
