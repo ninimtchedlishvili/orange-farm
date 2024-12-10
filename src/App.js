@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar/sidebar'
 import Card from './components/Card/Card';
 import { CUSTOMERSDATA } from './components/util/customersData'
 import { CARDDATA } from './components/util/cardData';
-import { SMALLCARDDATA } from './components/util/SMCardData';
+
 
 function App() {
   return (
@@ -70,6 +70,7 @@ function App() {
             title="New deals"
             theme='newDeals'
           />
+
         </div>
       </div>
     </div>
