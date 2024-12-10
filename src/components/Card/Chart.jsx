@@ -1,6 +1,6 @@
 import React from "react";
 
-const Chart = ({ title, value, description, navLink, className }) => {
+const Chart = ({ title, navLink, className }) => {
   return (
     <div
       className={`bg-white p-4 shadow-md rounded-md flex flex-col gap-2 ${className}`}

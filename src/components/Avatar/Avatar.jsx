@@ -1,6 +1,6 @@
 import React from "react";
 import P from "../Text/P";
-import Pill from '../Pill/pill'
+import Pill from "../Pill/pill";
 import Fallbackimage from "./Fallbackimage";
 
 const Avatar = ({ img, name, isAdmin, description }) => {
@@ -10,9 +10,9 @@ const Avatar = ({ img, name, isAdmin, description }) => {
         <Fallbackimage img={img} name={name} />
         <div>
           <div className="flex flex-col">
-          <P content={name} />
+            <P content={name} />
             {isAdmin && <Pill content="Admin" />}
-            <P content={description} className="text-[12px]" />
+            {description && <P content={description} className="text-[12px]" />}
           </div>
         </div>
       </div>

@@ -2,30 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Sidebar from './components/Sidebar/sidebar'
 import Card from './components/Card/Card';
-
-const customersData = [
-  {
-    img: "https://randomuser.me/api/portraits/women/1.jpg",
-    name: "Chris Friedkly",
-    description: "Supermarket Villanova",
-  },
-  {
-    img: "https://randomuser.me/api/portraits/women/4.jpg",
-    name: "Maggie Johnson",
-    description: "Oasis Organic Inc.",
-  },
-  {
-    img: "https://randomuser.me/api/portraits/women/8.jpg",
-    name: "Gael Harry",
-    description: "New York Finest Fruits",
-  },
-  {
-    img: "https://randomuser.me/api/portraits/women/18.jpg",
-    name: "Jenna Sullivan",
-    description: "Walmart",
-  },
-];
-
+import { CUSTOMERSDATA } from './components/util/customersData'
+import { CARDDATA } from './components/util/cardData';
+import { SMALLCARDDATA } from './components/util/SMCardData';
 
 function App() {
   return (
@@ -33,39 +12,63 @@ function App() {
       <Sidebar />
       <div className='flex flex-col gap-4 w-full'>
         <div className='flex w-full gap-4 '>
-          <Card
-            className="w-[40%]"
-            title="Revenues"
-            value="15%"
-            description="Increase compared to last week"
-            navLink="Revenues report"
-            theme="text"
-            increase={true}
-          />
-          <Card
-            className="w-[40%]"
-            title="Lost deals"
-            value="4%"
-            description="You closed 96 out of 100 deals"
-            navLink="All deals"
-            theme="text"
-            
-          />
-          <Card
-            className="w-[20%]"
-            title="Quarter goal"
-            value="84%"
-            navLink="All goals"
-            theme="chart"
-          />
+          {
+            CARDDATA.map((data, index) => (
+              <Card
+                className={data.className}
+                key={index}
+                title={data.title}
+                value={data.value}
+                description={data.description}
+                navLink={data.navLink}
+                theme={data.theme}
+                increase={data.increase}
+              />
+            ))
+          }
         </div>
-        <div>
-        <Card
-            className="w-[50%]"
+
+        <div className='flex w-full gap-4'>
+          <Card
+            className="w-1/2"
             title="Customers"
-            description={customersData}
+            description={CUSTOMERSDATA}
             navLink="All customers"
-            theme="avatarCard"
+            theme="Customers"
+          />
+          <div className='flex flex-col gap-4 w-1/2'>
+            <Card
+              className="w-full"
+              title="Growth"
+              theme="growth"
+            />
+
+            <Card
+              className="w-1/3"
+              theme="SmallCard"
+            />
+          </div>
+        </div>
+
+        <div className='flex gap-4'>
+          <Card
+            className="w-1/3"
+            title="Chats"
+            notification='2 unread messages'
+            description={CUSTOMERSDATA}
+            theme='chats'
+          />
+
+          <Card
+            className="w-1/3"
+            title="Top states"
+            theme='topStates'
+          />
+
+          <Card
+            className="w-1/3"
+            title="New deals"
+            theme='newDeals'
           />
         </div>
       </div>

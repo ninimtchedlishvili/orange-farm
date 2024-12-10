@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "../Avatar/Avatar";
 
-const AvatarCard = ({ title, description, navLink, className }) => (
+const Customers = ({ title, description, navLink, className }) => (
   <div
     className={`bg-white p-4 shadow-md rounded-md flex flex-col gap-2 ${className}`}
   >
@@ -25,4 +25,4 @@ const AvatarCard = ({ title, description, navLink, className }) => (
   </div>
 );
 
-export default AvatarCard;
+export default Customers;

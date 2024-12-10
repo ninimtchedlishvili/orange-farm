@@ -1,8 +1,12 @@
 import React from "react";
 import TextCard from "./TextCard";
 import Chart from "./Chart";
-import AvatarCard from "./AvatarCard";
-
+import Customers from "./Customers";
+import Growth from "./Growth";
+import SmallCard from "./SmallCard";
+import Chats from "../Card/Chats";
+import TopStates from "../Card/TopStates";
+import NewDeals from './NewDeals';
 
 const Card = ({
   title,
@@ -12,6 +16,10 @@ const Card = ({
   className,
   theme,
   increase,
+  boldDate,
+  year,
+  notification,
+  img,
 }) => {
   const renderCard = () => {
     switch (theme) {
@@ -36,15 +44,44 @@ const Card = ({
             className={className}
           />
         );
-      case "avatarCard":
+      case "Customers":
         return (
-          <AvatarCard
+          <Customers
             title={title}
             description={description}
             navLink={navLink}
             className={className}
           />
         );
+      case "growth":
+        return <Growth title={title} className={className} />;
+      case "SmallCard":
+        return (
+          <SmallCard
+            title={title}
+            className={className}
+            boldDate={boldDate}
+            description={description}
+            year={year}
+          />
+        );
+
+      case "chats":
+        return (
+          <Chats
+            title={title}
+            className={className}
+            notification={notification}
+            description={description}
+          />
+        );
+
+      case "topStates":
+        return <TopStates title={title} className={className} />;
+
+      case "newDeals":
+        return <NewDeals title={title} className={className} />;
+
       default:
         return null;
     }
