@@ -38,7 +38,7 @@ const TextCard = ({
       <p className="font-normal text-[14px] w-full">{description}</p>
       <a
         href=""
-        className="text-dark_orange text-[14px] mt-16 flex items-center gap-2 w-full"
+        className="text-dark_orange text-[14px] mt-8 flex items-center gap-2 w-full"
       >
         {navLink}
         <svg

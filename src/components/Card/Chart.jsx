@@ -3,7 +3,7 @@ import React from "react";
 const Chart = ({ title, navLink, className }) => {
   return (
     <div
-      className={`bg-white p-4 shadow-md rounded-md flex flex-col gap-2 ${className}`}
+      className={`bg-white p-4 shadow-lg rounded-md flex flex-col gap-2 ${className}`}
     >
       <h1 className="text-[20px] font-semibold w-full">{title}</h1>
 
@@ -33,7 +33,7 @@ const Chart = ({ title, navLink, className }) => {
       </svg>
       <a
         href=""
-        className="text-dark_orange text-[14px] mt-16 flex items-center gap-2 w-full justify-center"
+        className="text-dark_orange text-[14px] mt-8 flex items-center gap-2 w-full justify-center"
       >
         {navLink}
         <svg

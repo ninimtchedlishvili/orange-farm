@@ -6,7 +6,7 @@ import P from "../../Text/P";
 const Footer = () => {
   return (
     <div>
-      <Avatar img={null} name="John Doe" isAdmin={true} description={null} />
+      <Avatar img={null} name="John Doe" isAdmin={true} description={null} className="flex items-center gap-3" />
       <ul>
         {NAVIGATIONFOOTER?.map((item, index) => (
           <li key={index} className="flex items-center py-[12px] gap-3">

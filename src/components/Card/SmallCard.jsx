@@ -15,63 +15,55 @@ const SmallCard = ({
     <div className="flex gap-4">
       {SMALLCARDDATA.map((item, index) => (
         <div
-          className={`bg-white flex flex-col p-4 shadow-md rounded-md gap-2 ${className}`}
+          key={index}
+          className={`bg-white flex flex-col p-4 shadow-md rounded-md justify-between ${className}`}
         >
           {item.title && (
-            <p
-              key={index}
-              className="text-[16px] text-mid_gray font-semibold w-full"
-            >
+            <p className="text-[16px] my-0 text-mid_gray font-semibold w-full">
               {item.title}
             </p>
           )}
 
+          <div>
+
+
           {item.month && !yearBold && (
-            <p
-              key={index}
-              className="text-[24px] font-semibold text-dark_orange w-full mt-[20px]"
-            >
+            <p className="text-[24px] font-semibold text-dark_orange w-full">
               {item.month}
             </p>
           )}
 
           {!item.month && item.yearBold && (
-            <h2
-              key={index}
-              className="text-[24px] font-semibold text-dark_orange w-full mt-[20px]"
-            >
+            <p className="text-[24px] font-semibold text-dark_orange w-full">
               {item.yearBold}
-            </h2>
+            </p>
           )}
 
           {item.year && (
-            <p
-              key={index}
-              className="text-[16px] text-orange font-semibold w-full"
-            >
+            <p className="text-[16px] text-orange mt-0 font-semibold w-full">
               {item.year}
             </p>
           )}
 
           {item.description && (
-            <p
-              key={index}
-              className="text-[14px] text-dark_grey font-semibold w-full "
-            >
+            <p className="text-[14px] text-dark_grey font-semibold w-full ">
               {item.description}
             </p>
           )}
+          </div>
 
           {item.avatar && (
-            <p key={index} className=" font-semibold w-full">
+            <p className=" font-semibold w-full">
               <Avatar
-                img={null}
+                className="flex flex-col items-start gap-2 mt-4"
+                img="https://randomuser.me/api/portraits/women/7.jpg"
                 name="Maggie Johnson"
+                nameClass="font-medium text-[14px] text-darkGrey"
                 description="Oasis Organic Inc."
+                descriptionClass="text-[12px] text-dark_grey"
               />
             </p>
           )}
-
         </div>
       ))}
     </div>

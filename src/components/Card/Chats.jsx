@@ -13,7 +13,7 @@ const AvatarCard = ({
   >
     <h1 className="text-[20px] font-semibold w-full">{title}</h1>
     <p>{notification}</p>
-    <div className="flex gap-4">
+    <div className="flex gap-4 mt-4">
       {description.map((item, index) => (
         <Avatar 
           key={index} 

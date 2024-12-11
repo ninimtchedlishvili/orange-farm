@@ -6,9 +6,10 @@ const Customers = ({ title, description, navLink, className }) => (
     className={`bg-white p-4 shadow-md rounded-md flex flex-col gap-2 ${className}`}
   >
     <h1 className="text-[20px] font-semibold w-full">{title}</h1>
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mt-2">
       {description.map((item, index) => (
         <Avatar
+          className="flex items-center gap-3"
           name={item.name}
           img={item.img}
           description={item.description}

@@ -52,7 +52,7 @@ function App() {
 
         <div className='flex gap-4'>
           <Card
-            className="w-1/3"
+            className="w-1/4"
             title="Chats"
             notification='2 unread messages'
             description={CUSTOMERSDATA}
@@ -66,7 +66,7 @@ function App() {
           />
 
           <Card
-            className="w-1/3"
+            className="w-1/2"
             title="New deals"
             theme='newDeals'
           />

@@ -14,12 +14,12 @@ const DEALS = [
 const NewDeals = ({ className, title }) => {
   return (
     <div
-      className={`bg-white p-4 shadow-md rounded-md flex flex-col justify-start gap-2 ${className}`}
+      className={`bg-white p-4 shadow-md rounded-xl flex flex-col justify-start gap-2 ${className}`}
     >
       <h1 className="text-[20px] font-semibold w-full">{title}</h1>
       <div className="flex flex-wrap gap-[8px]">
         {DEALS.map((item, index) => (
-          <div key={index} className="flex items-center gap-[8px] text-[14px] p-[12px]  bg-light_orange rounded-lg">
+          <div key={index} className="flex items-center gap-[8px] text-[14px] p-[12px] bg-light_orange rounded-lg">
             <PlusDeals />
             <p>{item.name}</p>
           </div>

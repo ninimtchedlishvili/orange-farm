@@ -3,15 +3,14 @@ import React from "react";
 const TopStates = ({ title, className }) => {
   return (
     <div
-      className={`bg-white p-4 shadow-md rounded-md flex flex-col justify-start gap-2 ${className}`}
+      className={`bg-white p-4 shadow-md rounded-md flex flex-col gap-2 ${className}`}
     >
-
       <h1 className="text-[20px] font-semibold w-full">{title}</h1>
 
       <svg
         width="100%"
-        height="141"
-        viewBox="0 0 272 141"
+        height="100%"
+        // viewBox="0 0 100% 100%"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
