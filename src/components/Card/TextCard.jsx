@@ -27,9 +27,9 @@ const TextCard = ({
               <path
                 d="M22.6667 9.33334L9.33334 22.6667M22.6667 9.33334H10.6667M22.6667 9.33334V21.3333"
                 stroke="#25CD25"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           )}
@@ -51,8 +51,8 @@ const TextCard = ({
           <path
             d="M0.916664 3.11162H9.08333M9.08333 3.11162L6.75 5.44496M9.08333 3.11162L6.75 0.77829"
             stroke="#734A00"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </a>

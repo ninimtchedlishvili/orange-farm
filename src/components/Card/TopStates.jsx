@@ -83,8 +83,8 @@ const TopStates = ({ title, className }) => {
             y2="15"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFCD71" />
-            <stop offset="1" stop-color="#FFCD71" stop-opacity="0" />
+            <stop stopColor="#FFCD71" />
+            <stop offset="1" stopColor="#FFCD71" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_0_1"
@@ -94,8 +94,8 @@ const TopStates = ({ title, className }) => {
             y2="52"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFCD71" />
-            <stop offset="1" stop-color="#FFCD71" stop-opacity="0" />
+            <stop stopColor="#FFCD71" />
+            <stop offset="1" stopColor="#FFCD71" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_0_1"
@@ -105,8 +105,8 @@ const TopStates = ({ title, className }) => {
             y2="89"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFCD71" />
-            <stop offset="1" stop-color="#FFCD71" stop-opacity="0" />
+            <stop stopColor="#FFCD71" />
+            <stop offset="1" stopColor="#FFCD71" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_0_1"
@@ -116,8 +116,8 @@ const TopStates = ({ title, className }) => {
             y2="126"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFCD71" />
-            <stop offset="1" stop-color="#FFCD71" stop-opacity="0" />
+            <stop stopColor="#FFCD71" />
+            <stop offset="1" stopColor="#FFCD71" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

@@ -11,7 +11,7 @@ export const SMALLCARDDATA = [
         title: "Top Year",
         month: null,
         year:null,
-        yearBold:"2023",
+        yearBold: "2024",
         description:'96K sold so far',
         avatar: null
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { SMALLCARDDATA } from "../util/SMCardData";
 import Avatar from "../Avatar/Avatar";
+import Growth from "./Growth";
 
 const SmallCard = ({
   className,
@@ -9,7 +10,7 @@ const SmallCard = ({
   yearBold,
   avatar,
   description,
-  title,
+  title
 }) => {
   return (
     <div className="flex gap-4">

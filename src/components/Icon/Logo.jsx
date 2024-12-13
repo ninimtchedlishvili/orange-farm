@@ -9,7 +9,7 @@ const Logo = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_202_78)">
+      <g clipPath="url(#clip0_202_78)">
         <ellipse cx="10.4" cy="20" rx="10.4" ry="10.4959" fill="#FFA500" />
         <ellipse
           opacity="0.6"
@@ -74,8 +74,8 @@ const Logo = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(7.06439 6.10078) rotate(90) scale(6.10078 7.06439)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <clipPath id="clip0_202_78">
           <rect

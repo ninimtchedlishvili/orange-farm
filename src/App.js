@@ -9,9 +9,11 @@ import { CARDDATA } from './components/util/cardData';
 function App() {
   return (
     <div className="flex p-4 gap-4 bg-off_white">
+
       <Sidebar />
       <div className='flex flex-col gap-4 w-full'>
         <div className='flex w-full gap-4 '>
+
           {
             CARDDATA.map((data, index) => (
               <Card
@@ -27,6 +29,9 @@ function App() {
             ))
           }
         </div>
+        
+
+
 
         <div className='flex w-full gap-4'>
           <Card

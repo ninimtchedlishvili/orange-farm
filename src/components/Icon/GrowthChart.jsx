@@ -132,7 +132,7 @@ const GrowthChart = () => {
             d="M170.5 53.5L113 99L56 109.5V130L462.5 130.5V8L403.5 33L345 86.5084L286.5 106.008L228.5 33L170.5 53.5Z"
             fill="url(#paint0_linear_33_429)"
             stroke="#25CD25"
-            stroke-dasharray="2 2"
+            strokeDasharray="2 2"
           />
         </g>
         <defs>
@@ -144,8 +144,8 @@ const GrowthChart = () => {
             y2="130"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#25CD25" stop-opacity="0.4" />
-            <stop offset="1" stop-color="#25CD25" stop-opacity="0" />
+            <stop stopColor="#25CD25" stopOpacity="0.4" />
+            <stop offset="1" stopColor="#25CD25" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
