@@ -31,9 +31,9 @@ export const NAVIGATION = [
     ],
   },
   {
-    label: "all reports",
+    label: "all Products",
     icon: <Reports />,
-    href: "/allreports"
+    href: "/allproducts"
 
   },
   {
