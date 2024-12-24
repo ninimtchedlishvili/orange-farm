@@ -12,10 +12,13 @@ export const NAVIGATION = [
   {
     label: "Dashboard",
     icon: <Dashboard />,
+    href: "/"
   },
   {
     label: "Customers",
     icon: <Customers />,
+    href: "/customers",
+
     subMenu: [
       {
         label: "All Customers",
@@ -30,21 +33,31 @@ export const NAVIGATION = [
   {
     label: "all reports",
     icon: <Reports />,
+    href: "/allreports"
+
   },
   {
     label: "Geography",
     icon: <Geography />,
+    href: "/geography"
+
   },
   {
     label: "Conversations",
     icon: <Conversations />,
+    href: "/conversations"
+
   },
   {
     label: "Deals",
     icon: <Deals />,
+    href: "/deals"
+
   },
   {
     label: "Export",
     icon: <Export />,
+    href: "/export"
+
   },
 ];
