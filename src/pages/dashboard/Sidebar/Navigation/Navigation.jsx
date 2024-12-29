@@ -1,6 +1,6 @@
 import React from "react";
-import { NAVIGATION } from "../../util/navigation";
-import P from "../../Text/P";
+import { NAVIGATION } from "../../../../components/util/navigation";
+import P from "../../../../pages/dashboard/Text/P";
 import { NavLink } from "react-router";
 
 const Navigation = () => {

@@ -1,7 +1,7 @@
 import React from "react";
-import { SMALLCARDDATA } from "../util/SMCardData";
+import { SMALLCARDDATA } from "../../../components/util/SMCardData";
 import Avatar from "../Avatar/Avatar";
-import Growth from "./Growth";
+// import Growth from "../../../components/Icon/GrowthChart";
 
 const SmallCard = ({
   className,

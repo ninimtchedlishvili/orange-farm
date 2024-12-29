@@ -1,79 +1,56 @@
 import './App.css';
-import Card from './components/Card/Card';
-import { CUSTOMERSDATA } from './components/util/customersData'
-import { CARDDATA } from './components/util/cardData';
-
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Login from './pages/marketplace/Login';
+import Register from './pages/marketplace/Register';
+import Contact from './pages/dashboard/Contact';
+import NotFound from './pages/NotFound';
+import AllProducts from './components/marketplace/Product/AllProducts';
+import Sidebar from './pages/dashboard/Sidebar/sidebar';
+import SingleProduct from './pages/marketplace/SingleProduct';
+import Dashboard from './pages/dashboard/index';
+import Header from './components/marketplace/Layout/Header';
+import Footer from './components/marketplace/Layout/Footer';
 
 function App() {
+
+  const user = {
+    name: "John",
+    email: "john@gmail.com",
+    isAdmin: false,
+  }
+
   return (
-
-    <div className='flex flex-col gap-4 w-full'>
-      <div className='flex w-full gap-4 '>
-
-        {
-          CARDDATA.map((data, index) => (
-            <Card
-              className={data.className}
-              key={index}
-              title={data.title}
-              value={data.value}
-              description={data.description}
-              navLink={data.navLink}
-              theme={data.theme}
-              increase={data.increase}
-            />
-          ))
-        }
-      </div>
-
-
-
-
-      <div className='flex w-full gap-4'>
-        <Card
-          className="w-1/2"
-          title="Customers"
-          description={CUSTOMERSDATA}
-          navLink="All customers"
-          theme="Customers"
-        />
-        <div className='flex flex-col gap-4 w-1/2'>
-          <Card
-            className="w-full"
-            title="Growth"
-            theme="growth"
-          />
-
-          <Card
-            className="w-1/3"
-            theme="SmallCard"
-          />
+    <BrowserRouter>
+      {user?.isAdmin ? (
+        <div className="flex p-4 gap-4 bg-off_white">
+          <Sidebar />
+          <Routes>
+            <Route path='/' element={<Dashboard />}></Route>
+            <Route path='contact' element={<Contact />}></Route>
+            <Route path='customers' element={<div>customers</div>}></Route>
+            <Route path='allproducts' element={<AllProducts />}></Route>
+            <Route path='geography' element={<div>geography</div>}></Route>
+            <Route path='conversations' element={<div>conversations</div>}></Route>
+            <Route path='deals' element={<div>deals</div>}></Route>
+            <Route path='export' element={<div>export</div>}></Route>
+            <Route path='products/:id' element={<SingleProduct />}></Route>
+            <Route path='*' element={<NotFound />}></Route>
+          </Routes>
         </div>
-      </div>
-
-      <div className='flex gap-4'>
-        <Card
-          className="w-1/4"
-          title="Chats"
-          notification='2 unread messages'
-          description={CUSTOMERSDATA}
-          theme='chats'
-        />
-
-        <Card
-          className="w-1/3"
-          title="Top states"
-          theme='topStates'
-        />
-
-        <Card
-          className="w-1/2"
-          title="New deals"
-          theme='newDeals'
-        />
-
-      </div>
-    </div>
+      ) : (
+        <div>
+          <Header />
+          <Routes>
+            <Route path='/' element={<AllProducts />}></Route>
+            <Route path='login' element={<Login />}></Route>
+            <Route path='register' element={<Register />}></Route>
+            <Route path='products/:id' element={<SingleProduct />}></Route>
+            <Route path='*' element={<NotFound />}></Route>
+          </Routes>
+          <Footer />
+        </div>
+      )}
+    </BrowserRouter>
   );
 }
 

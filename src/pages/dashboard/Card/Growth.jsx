@@ -1,5 +1,5 @@
 import React from "react";
-import GrowthChart from "../Icon/GrowthChart";
+import GrowthChart from "../../../components/Icon/GrowthChart";
 import { useState } from "react";
 
 const Growth = ({ title, className }) => {

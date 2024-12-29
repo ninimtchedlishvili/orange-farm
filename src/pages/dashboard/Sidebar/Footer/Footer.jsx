@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "../../Avatar/Avatar";
-import { NAVIGATIONFOOTER } from "../../util/navigationFooter";
-import P from "../../Text/P";
+import { NAVIGATIONFOOTER } from "../../../../components/util/navigationFooter";
+import P from "../../../../pages/dashboard/Text/P";
 
 const Footer = () => {
   return (

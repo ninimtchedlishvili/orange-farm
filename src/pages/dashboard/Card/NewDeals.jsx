@@ -1,5 +1,5 @@
 import React from "react";
-import PlusDeals from "../Icon/PlusDeals";
+import PlusDeals from "../../../components/Icon/PlusDeals";
 
 const DEALS = [
   { name: "Fruit2Go" },
