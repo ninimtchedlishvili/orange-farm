@@ -10,13 +10,28 @@ import SingleProduct from './pages/marketplace/SingleProduct';
 import Dashboard from './pages/dashboard/index';
 import Header from './components/marketplace/Layout/Header';
 import Footer from './components/marketplace/Layout/Footer';
+import { useState, useEffect } from 'react';
 
 function App() {
+
+  const [isAdmin, setIsAdmin] = useState(false);
+  const hasToken = localStorage.getItem("token");
+
+  useEffect(() => {
+    if (hasToken) {
+      setIsAdmin(true);
+
+    } else {
+      setIsAdmin(false);
+
+    }
+  }, [hasToken])
+
 
   const user = {
     name: "John",
     email: "john@gmail.com",
-    isAdmin: false,
+    isAdmin: isAdmin,
   }
 
   return (
@@ -25,7 +40,7 @@ function App() {
         <div className="flex p-4 gap-4 bg-off_white">
           <Sidebar />
           <Routes>
-            <Route path='/' element={<Dashboard />}></Route>
+            <Route path='/dashboard' element={<Dashboard />}></Route>
             <Route path='contact' element={<Contact />}></Route>
             <Route path='customers' element={<div>customers</div>}></Route>
             <Route path='allproducts' element={<AllProducts />}></Route>

@@ -1,9 +1,37 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({});
 
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+
+    fetch("https://fakestoreapi.com/auth/login", {
+      method: "POST",
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        localStorage.setItem("token", json.token);
+        window.location.href = "/dashboard";
+      });
+  };
+
+  // get all users
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/users")
+      .then((res) => res.json())
+      .then((json) => setUser(json));
+  }, []);
+  console.log(user);
+
   return (
     <section className="bg-white">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -12,7 +40,11 @@ const Login = () => {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
               Sign in to your account
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4 md:space-y-6"
+              action="#"
+            >
               <div>
                 <label
                   htmlFor="username"
@@ -24,6 +56,8 @@ const Login = () => {
                   type="text"
                   name="username"
                   id="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   placeholder="username"
                   required
@@ -41,6 +75,8 @@ const Login = () => {
                   type="password"
                   name="password"
                   id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   required
@@ -48,19 +84,16 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-black text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                className="w-full text-white bg-blue-600 bg-black  font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Log In
+                Sign in
               </button>
-              {/* <p className="text-sm font-light text-gray-500">
-                Already have an account?{" "}
-                <a
-                  href="#"
-                  className="font-medium text-primary-600 hover:underline"
-                >
+              <p className="text-sm font-light text-gray-500">
+                Create an account
+                <NavLink to="/register" className="btn btn-primary">
                   Login here
-                </a>
-              </p> */}
+                </NavLink>
+              </p>
             </form>
           </div>
         </div>

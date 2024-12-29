@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +43,6 @@ const Register = () => {
       .then((json) => console.log(json));
   };
   
-  // id: 1
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -190,19 +190,16 @@ const Register = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-black text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                className="w-full text-white bg-blue-600 bg-black  font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Create an account
               </button>
-              {/* <p className="text-sm font-light text-gray-500">
+              <p className="text-sm font-light text-gray-500">
                 Already have an account?{" "}
-                <a
-                  href="#"
-                  className="font-medium text-primary-600 hover:underline"
-                >
+                <NavLink to="/login" className="btn btn-primary">
                   Login here
-                </a>
-              </p> */}
+                </NavLink>
+              </p>
             </form>
           </div>
         </div>
